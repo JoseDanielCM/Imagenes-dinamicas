@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Fotos</title>
+    <style>
+        .photo-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .photo-item {
+            position: relative;
+        }
+        .delete-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        img {
+            width: 100px; /* Cambia el tamaño según sea necesario */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Galería de Fotos</h1>
+<input type="text" id="urlInput" placeholder="Ingresa la URL de la foto" />
+<button id="addPhotoBtn">Agregar Foto</button>
+<div class="photo-container" id="photoContainer"></div>
+
+<script src="main.js"></script>
+</body>
+</html>
