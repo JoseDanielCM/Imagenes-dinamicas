@@ -1,0 +1,203 @@
+body::-webkit-scrollbar {
+    display: none; 
+}
+
+.form_img {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.4fr;
+    gap: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.form_img > *{
+    box-sizing: border-box;
+    height: 40px;
+}
+
+#addPhoto {
+    background-image: url(upload.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.photo {
+    position: relative;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-sizing: border-box;
+}
+
+.photo:hover{
+    transform: scale(1.1); 
+    box-shadow: 0 0 10px #00000080; 
+}
+
+.photo > h1 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.btn_delete {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #0000006d;
+    background-image: url(trash.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75%;
+    width: 35px;
+    height: 35px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn_add {
+    position: absolute;
+    top: 5px;
+    right: 50px;
+    background-color: #0000006d;
+    background-image: url(details.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:85%;
+    width: 35px;
+    height: 35px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn_edit {
+    position: absolute;
+    top: 5px;
+    right: 95px;
+    background-color: #0000006d;
+    background-image: url(editBtn.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:85%;
+    width: 35px;
+    height: 35px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.oculto {
+    display: none;
+}
+
+.imgElement {
+    width: 300px;
+    height: auto;
+}
+
+.titlePhoto {
+    word-wrap: break-word;
+    max-width: 50vw;
+    text-align: center;
+}
+
+.seePhoto {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000094;
+    backdrop-filter: blur(3px);
+    animation: blur-in 0.5s normal 0s;
+    z-index: 10;
+}
+
+
+@keyframes blur-in{
+from{
+opacity: 0;
+filter: blur(4px);
+}
+to{
+opacity: 1;
+filter: blur(0);
+}
+}
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    max-height: 90vh;
+    color: white;
+    overflow: auto; 
+    animation: zoomIn 0.5s forwards;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.popup-content::-webkit-scrollbar {
+    display: none; 
+}
+
+.seeImg{
+    width: 50vw;
+    height: auto;
+}
+
+.seeTitlePhoto{
+    color: white;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 80px;
+}
+
+.seeDescPhoto{
+    color: white;
+    margin: 0;
+    word-wrap: break-word;
+    width: 90vw;
+    text-align: center;
+}
+
+.closeBtn{
+    position: fixed;
+    top: 8px;
+    right: 10px;
+    background-image: url(closeBtn.png);
+    background-repeat: no-repeat;   
+    background-position: center;
+    background-size: contain;
+    background-color: transparent;
+    border-color: transparent;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
